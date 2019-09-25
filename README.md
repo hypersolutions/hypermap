@@ -101,7 +101,17 @@ public class SingleLineAddressConverter : ITypeConverter<Address, string>
 }
 ```
 
-The above is an example of a converter that takes a source object _Address_ and converts it to a single-line string.
+The above is an example of a converter that takes a source object _Address_ and converts it to a single-line string. The resulting map class would look like:
+
+```
+public sealed class AddressToSingleLineAddressViewMap : MapBase<Address, SingleLineAddressView>
+{
+    public AddressToSingleLineAddressViewMap()
+    {
+        For(p => p).MapTo(p => p.Display).Using<SingleLineAddressConverter>();
+    }
+}
+```
 
 Also note the _MappingFactory_ property. This allows you to resolve other mappings to use in your converter. For example given the following source and target classes:
 
@@ -154,6 +164,6 @@ public sealed class OrderToOrderViewMap : MapBase<Order, OrderView>
 }
 ```
 
-There is also a base class _TypeConverter_ that you can inherit from which provides an override for the Convert method.
+**There** is also a base class _TypeConverter_ that you can inherit from which provides an override for the Convert method.
 
 
