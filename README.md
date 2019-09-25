@@ -10,14 +10,6 @@ Why create HyperMap. This provides a unique solution to the common pattern of co
 
 There are frameworks that already do this but _HyperMap_ utilises the _Roslyn_ compiler to generate code at runtime to give you the same performance benefits as if you wrote the code yourself.
 
-### Usecaes
-
-Below details a couple of usecases for using HyperMap.
-
-- **Inline Mappings:** Use as normal by describing your mappings in _map_ classes and then using the startup process to build the factory and optionally register all the _IMapper<TSource, TTarget>_ instances with your IoC. You do pay a small startup time penalty as the _Roslyn_ compiler must create and compile the code into a assembly that is then loaded into the app domain.
-
-- **Build Pipelines:** One usecase is to build the code containing your mappings in a build pipeline and publish a NuGet package to a NuGet server so projects can reference it. 
-
 ### Your First Map Class
 
 Given the following simple source and target classes:
