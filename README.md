@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-You can find this package via NuGet: **HyperMap**
+You can find this package via NuGet: [**Hyper.Map**](https://www.nuget.org/packages/Hyper.Map)
 
 ### Overview
 
