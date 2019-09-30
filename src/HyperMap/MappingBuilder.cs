@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -13,9 +14,11 @@ namespace HyperMap
     public sealed class MappingBuilder
     {
         private readonly List<MapBase> _mappings = new List<MapBase>();
+        private readonly List<string> _visitedAssemblyLocations = new List<string>();
 
-        private MappingBuilder(IEnumerable<MapBase> mappings)
+        private MappingBuilder(IEnumerable<MapBase> mappings, Type assemblyType)
         {
+            _visitedAssemblyLocations.Add(assemblyType.Assembly.Location);
             _mappings.AddRange(mappings);
         }
         
@@ -23,11 +26,16 @@ namespace HyperMap
         {
             var discover = new Discover();
             var mappings = discover.FindFrom<TAssemblyType>();
-            return new MappingBuilder(mappings);
+            return new MappingBuilder(mappings, typeof(TAssemblyType));
         }
         
         public MappingBuilder AndDiscoverIn<TAssemblyType>()
         {
+            var assemblyType = typeof(TAssemblyType);
+
+            if (_visitedAssemblyLocations.Contains(assemblyType.Assembly.Location))
+                throw new ArgumentException($"Already added mappings in assembly {assemblyType.Assembly.FullName}.");
+            
             var discover = new Discover();
             var mappings = discover.FindFrom<TAssemblyType>();
             _mappings.AddRange(mappings);
