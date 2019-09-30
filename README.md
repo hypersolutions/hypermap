@@ -166,4 +166,70 @@ public sealed class OrderToOrderViewMap : MapBase<Order, OrderView>
 
 **There** is also a base class _TypeConverter_ that you can inherit from which provides an override for the Convert method.
 
+### Collections
+
+The basic set of collection mappings are supported via a set of _converters_. Given the following classes you wish to map between:
+
+```
+public class Customer
+{
+    public string Name { get; set; }
+    public IEnumerable<Order> Orders { get; set; }
+}
+
+public class Order
+{
+    public int Id { get; set; }
+    public string Description { get; set; }
+    public int Quantity { get; set; }
+}
+
+public class CustomerListView
+{
+    public string Name { get; set; }
+    public List<OrderView> Orders { get; set; }
+}
+
+public class OrderView
+{
+    public int Id { get; set; }
+    public string Description { get; set; }
+    public int Quantity { get; set; }
+}
+```
+
+You can create a map between an IEnumerable source and List target collection like:
+
+```
+public sealed class CustomerToCustomerListViewMap : MapBase<Customer, CustomerListView>
+{
+    public CustomerToCustomerListViewMap()
+    {
+        For(p => p.Orders).MapTo(p => p.Orders).Using<EnumerableToListTypeConverter<Order, OrderView>>();
+    }
+}
+```
+
+Other supported collections are:
+
+* **EnumerableTypeConverter** which is IEnumerable to IEnumerable
+* **ListToEnumerableTypeConverter** which is from a List to IEnumerable
+* **ListTypeConverter** which is List to List
+
+There is also a base class so you can create your own converters by extending _EnumerableTypeConverterBase_:
+
+```
+public sealed class ListTypeConverter<TSource, TTarget> 
+    : EnumerableTypeConverterBase<TSource, TTarget>, ITypeConverter<List<TSource>, List<TTarget>>
+    where TSource : class where TTarget : class
+{
+    public IMappingFactory MappingFactory { get; set; }
+    
+    public List<TTarget> Convert(List<TSource> from)
+    {
+        return ConvertInternal(from, MappingFactory)?.ToList();
+    }
+}
+```
+
 
