@@ -35,10 +35,7 @@ namespace HyperMap.CodeGen.Compile
                 optimizationLevel: OptimizationLevel.Release,
                 allowUnsafe: true);
             
-            return CSharpCompilation
-                .Create(_options.AssemblyName, options: options, references: references)
-                .AddReferences(references)
-                .AddSyntaxTrees(trees);
+            return CSharpCompilation.Create(_options.AssemblyName, trees, references, options);
         }
     }
 }
