@@ -2,7 +2,14 @@
 
 ## Getting Started
 
-You can find this package via NuGet: [**Hyper.Map**](https://www.nuget.org/packages/Hyper.Map)
+You can find this packages via NuGet: 
+
+
+[**Hyper.Map**](https://www.nuget.org/packages/Hyper.Map)
+
+[**Hyper.Map.DependencyInjection**](https://www.nuget.org/packages/Hyper.Map.DependencyInjection)
+
+**Note** that _Hyper.Map.DependencyInjection_ provides support for the _Microsoft.Extensions.DependencyInjection_ NuGet package so you can automatically register _all_ _IMapper_ instances with its IoC.
 
 ### Overview
 
@@ -232,4 +239,31 @@ public sealed class ListTypeConverter<TSource, TTarget>
 }
 ```
 
+### Microsoft Extensions Dependency Injection Support
 
+If you install the _Hyper.Map.DependencyInjection_ NuGet package, it will add an extension method to the _IMappingFactory_ interface to register all the instances with it.
+
+As previously stated, all the _IMapper_ instances are stateless so the extension adds each as a _singleton_ into the _ServiceCollection_:
+
+```
+var services = new ServiceCollection();
+
+var factory = MappingBuilder.DiscoverIn<Address>().BuildFactory().RegisterWith(services);
+```
+
+You can inject the _IMapper<TSource, TTarget>_ into any classes within your code as normal instead of the _IMappingFactory_.
+
+**Note** that the _IMappingFactory_ has a method called _GetAll_ which you can use to get all instances and add into any of your own IoC implementations. You can get its interface type:
+
+```
+var services = new ServiceCollection();
+var factory = MappingBuilder.DiscoverIn<Address>().BuildFactory();
+
+foreach (var mappingInstance in factory.GetAll())
+{
+    var mappingInterfaceType = mappingInstance.GetType().GetInterfaces().First();
+    services.AddSingleton(mappingInterfaceType, mappingInstance);
+}
+```
+
+**Where** you can replace _services_ with your own IoC. 

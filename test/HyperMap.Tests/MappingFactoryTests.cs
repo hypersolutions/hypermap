@@ -1,3 +1,4 @@
+using System.Linq;
 using HyperMap.Mapping;
 using HyperMap.Tests.Support;
 using Shouldly;
@@ -36,6 +37,28 @@ namespace HyperMap.Tests
             var mapper2 = factory.Create<User, UserView>();
             
             mapper1.ShouldBe(mapper2);
+        }
+        
+        [Fact]
+        public void MappingFactory_ForAllMappings_GetAll_ReturnsList()
+        {
+            var factory = new MappingFactory(typeof(UserToUserViewMap).Assembly);
+
+            var mappings = factory.GetAll();
+            
+            mappings.Count().ShouldBe(1);
+        }
+        
+        [Fact]
+        public void MappingFactory_ForAllMappings_GetAll_ReturnsSameInstanceAsCreate()
+        {
+            var factory = new MappingFactory(typeof(UserToUserViewMap).Assembly);
+            var mapping1 = factory.Create<User, UserView>();
+            
+            var mappings = factory.GetAll();
+            
+            var mapping2 = mappings.First();
+            mapping2.ShouldBe(mapping1);
         }
     }
 }

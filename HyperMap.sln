@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperMap.Tests", "test\Hype
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperMap.Integration.Tests", "test\HyperMap.Integration.Tests\HyperMap.Integration.Tests.csproj", "{438511E9-9C9E-4412-9617-B553E212B78B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperMap.DependencyInjection", "src\HyperMap.DependencyInjection\HyperMap.DependencyInjection.csproj", "{81705725-C12E-4D3D-8B51-B48A168C1233}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperMap.DependencyInjection.Tests", "test\HyperMap.DependencyInjection.Tests\HyperMap.DependencyInjection.Tests.csproj", "{C91909A6-8A77-4922-8D2C-204EBFFAA52A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,10 +32,20 @@ Global
 		{438511E9-9C9E-4412-9617-B553E212B78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{438511E9-9C9E-4412-9617-B553E212B78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{438511E9-9C9E-4412-9617-B553E212B78B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81705725-C12E-4D3D-8B51-B48A168C1233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81705725-C12E-4D3D-8B51-B48A168C1233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81705725-C12E-4D3D-8B51-B48A168C1233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81705725-C12E-4D3D-8B51-B48A168C1233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C91909A6-8A77-4922-8D2C-204EBFFAA52A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C91909A6-8A77-4922-8D2C-204EBFFAA52A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C91909A6-8A77-4922-8D2C-204EBFFAA52A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C91909A6-8A77-4922-8D2C-204EBFFAA52A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9B31E3EC-CC5A-464D-B747-474E8EC8CCF2} = {81974FDE-1C02-46A3-8ED9-0439F283DF30}
 		{83AC9556-DED6-4027-9536-5185827D7AB8} = {E03493EE-1A96-4194-B1DE-DD427ECE52D0}
 		{438511E9-9C9E-4412-9617-B553E212B78B} = {E03493EE-1A96-4194-B1DE-DD427ECE52D0}
+		{81705725-C12E-4D3D-8B51-B48A168C1233} = {81974FDE-1C02-46A3-8ED9-0439F283DF30}
+		{C91909A6-8A77-4922-8D2C-204EBFFAA52A} = {E03493EE-1A96-4194-B1DE-DD427ECE52D0}
 	EndGlobalSection
 EndGlobal
