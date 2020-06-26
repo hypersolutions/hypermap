@@ -11,7 +11,7 @@ You can find this packages via NuGet:
 
 **Note** that _Hyper.Map.DependencyInjection_ provides support for the _Microsoft.Extensions.DependencyInjection_ NuGet package so you can automatically register _all_ _IMapper_ instances with its IoC.
 
-### Overview
+## Overview
 
 Why create HyperMap. This provides a unique solution to the common pattern of copying object data around - something that is a very common, tedious pattern in code.
 
@@ -267,3 +267,41 @@ foreach (var mappingInstance in factory.GetAll())
 ```
 
 **Where** you can replace _services_ with your own IoC. 
+
+## Developer Notes
+
+### Building and Publishing
+
+From the root, to build, run:
+
+```bash
+dotnet build --configuration Release
+```
+
+To run all the unit and integration tests, run:
+
+```bash
+dotnet test --no-build --configuration Release
+```
+
+To create the packages, run (**optional** as the build generates the packages):
+ 
+```bash
+cd src/HyperMap
+dotnet pack --no-build --configuration Release
+
+cd src/HyperMap.DependencyInjection
+dotnet pack --no-build --configuration Release
+```
+
+To publish the packages to the nuget feed on nuget.org:
+
+```bash
+dotnet nuget push ./bin/Release/Hyper.Map.2.0.0.nupkg -k [THE API KEY] -s https://api.nuget.org/v3/index.json
+
+dotnet nuget push ./bin/Release/Hyper.Map.DependencyInjection.2.0.0.nupkg -k [THE API KEY] -s https://api.nuget.org/v3/index.json
+```
+
+## Links
+
+* **GitFlow** https://datasift.github.io/gitflow/IntroducingGitFlow.html

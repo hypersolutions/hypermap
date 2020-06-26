@@ -1,9 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <PropertyGroup>
         <PackageId>Hyper.Map.DependencyInjection</PackageId>
-        <Version>1.0.0</Version>
+        <Version>2.0.0</Version>
         <Authors>Hyperbolic Solutions</Authors>
         <Company>Hyperbolic Solutions</Company>
         <Title>Hyperbolic Mapping Microsoft Dependency Injection Framework</Title>
@@ -22,12 +26,11 @@
         <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <ItemGroup>
       <ProjectReference Include="..\HyperMap\HyperMap.csproj" />
     </ItemGroup>
     
     <ItemGroup>
-      <PackageReference Include="Hyper.Map" Version="1.0.2" Condition="'$(Configuration)' == 'Release'" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0" />
     </ItemGroup>
     
