@@ -11,7 +11,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("")]
         [InlineData(" ")]
         [InlineData("Hello")]
-        public void StringToDecimalTypeConverter_WithInvalidString_Convert_ReturnsZero(string source)
+        public void WithInvalidString_Convert_ReturnsZero(string source)
         {
             var converter = new StringToDecimalTypeConverter();
 
@@ -24,7 +24,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("0.0")]
         [InlineData("1.0")]
         [InlineData("-1.0")]
-        public void StringToDecimalTypeConverter_WithString_Convert_ReturnsDecimal(string source)
+        public void WithString_Convert_ReturnsDecimal(string source)
         {
             var converter = new StringToDecimalTypeConverter();
 

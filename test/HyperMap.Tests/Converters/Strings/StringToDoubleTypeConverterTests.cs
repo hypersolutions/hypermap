@@ -11,7 +11,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("")]
         [InlineData(" ")]
         [InlineData("Hello")]
-        public void StringToDoubleTypeConverter_WithInvalidString_Convert_ReturnsZero(string source)
+        public void WithInvalidString_Convert_ReturnsZero(string source)
         {
             var converter = new StringToDoubleTypeConverter();
 
@@ -24,7 +24,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("0.0")]
         [InlineData("1.0")]
         [InlineData("-1.0")]
-        public void StringToDoubleTypeConverter_WithString_Convert_ReturnsDouble(string source)
+        public void WithString_Convert_ReturnsDouble(string source)
         {
             var converter = new StringToDoubleTypeConverter();
 

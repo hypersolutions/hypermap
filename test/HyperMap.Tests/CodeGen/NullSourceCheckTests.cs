@@ -9,7 +9,7 @@ namespace HyperMap.Tests.CodeGen
     public class NullSourceCheckTests
     {
         [Fact]
-        public void NullSourceCheck_ForTargetType_Create_ReturnsIfStatementWithDefaultReturn()
+        public void ForTargetType_Create_ReturnsIfStatementWithDefaultReturn()
         {
             var targetType = typeof(UserView);
 

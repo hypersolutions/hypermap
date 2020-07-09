@@ -9,7 +9,7 @@ namespace HyperMap.Tests.CodeGen
     public class MapClassSignatureTests
     {
         [Fact]
-        public void MapClassSignature_ForSourceAndTarget_Create_ReturnsClassSignature()
+        public void ForSourceAndTarget_Create_ReturnsClassSignature()
         {
             var sourceType = typeof(User);
             var targetType = typeof(UserView);

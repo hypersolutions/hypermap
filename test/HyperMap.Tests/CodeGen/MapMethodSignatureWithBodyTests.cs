@@ -10,7 +10,7 @@ namespace HyperMap.Tests.CodeGen
     public class MapMethodSignatureWithBodyTests
     {
         [Fact]
-        public void MapMethodSignatureWithBody_WithBody_Create_ReturnsMethod()
+        public void WithBody_Create_ReturnsMethod()
         {
             var sourceType = typeof(User);
             var targetType = typeof(UserView);

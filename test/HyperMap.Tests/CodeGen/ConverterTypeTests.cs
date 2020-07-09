@@ -8,7 +8,7 @@ namespace HyperMap.Tests.CodeGen
     public class ConverterTypeTests
     {
         [Fact]
-        public void ConverterType_SingleTypeArg_Create_ReturnsTypeSyntax()
+        public void SingleTypeArg_Create_ReturnsTypeSyntax()
         {
             var typeArgs = new []{typeof(string)};
             var genericConverterType = typeof(DefaultTypeConverter<>);
@@ -20,7 +20,7 @@ namespace HyperMap.Tests.CodeGen
         }
         
         [Fact]
-        public void ConverterType_MultipleTypeArgs_Create_ReturnsTypeSyntax()
+        public void MultipleTypeArgs_Create_ReturnsTypeSyntax()
         {
             var typeArgs = new []{typeof(string), typeof(int)};
             var genericConverterType = typeof(ITypeConverter<,>);

@@ -11,7 +11,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("")]
         [InlineData(" ")]
         [InlineData("Hello")]
-        public void StringToIntegerTypeConverter_WithInvalidString_Convert_ReturnsZero(string source)
+        public void WithInvalidString_Convert_ReturnsZero(string source)
         {
             var converter = new StringToIntegerTypeConverter();
 
@@ -24,7 +24,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("0")]
         [InlineData("1")]
         [InlineData("-1")]
-        public void StringToIntegerTypeConverter_WithString_Convert_ReturnsInteger(string source)
+        public void WithString_Convert_ReturnsInteger(string source)
         {
             var converter = new StringToIntegerTypeConverter();
 

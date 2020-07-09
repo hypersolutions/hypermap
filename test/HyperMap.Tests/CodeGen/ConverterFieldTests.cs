@@ -12,7 +12,7 @@ namespace HyperMap.Tests.CodeGen
         [InlineData(0)]
         [InlineData(1)]
         [InlineData(2)]
-        public void ConverterField_ZeroIndex_Create_ReturnsConverter1(int converterTypeIndex)
+        public void ZeroIndex_Create_ReturnsConverter1(int converterTypeIndex)
         {
             var typeArgs = new []{typeof(string)};
             var genericConverterType = typeof(DefaultTypeConverter<>);

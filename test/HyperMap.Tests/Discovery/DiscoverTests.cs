@@ -9,7 +9,7 @@ namespace HyperMap.Tests.Discovery
     public class DiscoverTests
     {
         [Fact]
-        public void Discover_FromTypeInAssembly_FindFrom_ReturnsMappings()
+        public void FromTypeInAssembly_FindFrom_ReturnsMappings()
         {
             var discover = new Discover();
 

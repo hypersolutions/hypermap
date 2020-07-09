@@ -8,7 +8,7 @@ namespace HyperMap.Tests.CodeGen.Refs
     public class CommonReferencesTests
     {
         [Fact]
-        public void CommonReferences_ForMapping_Get_ReturnsReferences()
+        public void ForMapping_Get_ReturnsReferences()
         {
             var commonReferences = new CommonReferences();
 

@@ -7,7 +7,7 @@ namespace HyperMap.Tests.CodeGen.Compile
     public class CompilerOptionsTests
     {
         [Fact]
-        public void CompilerOptions_NoAssemblyNameSet_AssemblyName_ReturnsDefault()
+        public void NoAssemblyNameSet_AssemblyName_ReturnsDefault()
         {
             var options = new CompilerOptions();
             
@@ -18,7 +18,7 @@ namespace HyperMap.Tests.CodeGen.Compile
         [InlineData(null)]
         [InlineData("")]
         [InlineData(" ")]
-        public void CompilerOptions_InvalidAssemblyName_AssemblyName_ReturnsDefault(string assemblyName)
+        public void InvalidAssemblyName_AssemblyName_ReturnsDefault(string assemblyName)
         {
             var options = new CompilerOptions {AssemblyName = assemblyName};
             
@@ -28,7 +28,7 @@ namespace HyperMap.Tests.CodeGen.Compile
         [Theory]
         [InlineData("MyMappings")]
         [InlineData("HyperMap.Mappings")]
-        public void CompilerOptions_ValidAssemblyName_AssemblyName_ReturnsSelected(string assemblyName)
+        public void ValidAssemblyName_AssemblyName_ReturnsSelected(string assemblyName)
         {
             var options = new CompilerOptions {AssemblyName = assemblyName};
             

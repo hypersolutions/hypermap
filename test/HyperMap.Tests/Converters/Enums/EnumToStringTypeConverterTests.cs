@@ -9,7 +9,7 @@ namespace HyperMap.Tests.Converters.Enums
     public class EnumToStringTypeConverterTests
     {
         [Fact]
-        public void EnumToStringTypeConverter_InvalidEnum_Convert_ThrowsException()
+        public void InvalidEnum_Convert_ThrowsException()
         {
             var converter = new EnumToStringTypeConverter<int>();
 
@@ -19,7 +19,7 @@ namespace HyperMap.Tests.Converters.Enums
         }
 
         [Fact]
-        public void EnumToStringTypeConverter_ValidEnum_Convert_ReturnsString()
+        public void ValidEnum_Convert_ReturnsString()
         {
             var converter = new EnumToStringTypeConverter<FileMode>();
 

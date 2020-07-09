@@ -12,7 +12,7 @@ namespace HyperMap.Tests.CodeGen
         [InlineData(null)]
         [InlineData("")]
         [InlineData(" ")]
-        public void MapNamespace_NoNamespaceProvided_Create_ReturnsDefaultNamespace(string namespaceName)
+        public void NoNamespaceProvided_Create_ReturnsDefaultNamespace(string namespaceName)
         {
             var mapping = new UserToUserViewMap {Namespace = namespaceName};
             

@@ -9,7 +9,7 @@ namespace HyperMap.Tests.Mapping
     public class ConverterMapTests
     {
         [Fact]
-        public void ConverterMap_ForPropertyInfo_Using_SetsConverter()
+        public void ForPropertyInfo_Using_SetsConverter()
         {
             var mapInfo = new MapInfo();
             var converterBuilder = new ConverterMap<string, string>(mapInfo);
@@ -20,7 +20,7 @@ namespace HyperMap.Tests.Mapping
         }
         
         [Fact]
-        public void ConverterMap_ForPropertyInfo_UsingDefault_SetsConverter()
+        public void ForPropertyInfo_UsingDefault_SetsConverter()
         {
             var mapInfo = new MapInfo();
             var converterBuilder = new ConverterMap<string, string>(mapInfo);
@@ -31,7 +31,7 @@ namespace HyperMap.Tests.Mapping
         }
         
         [Fact]
-        public void ConverterMap_ForSourceAndTarget_UsingFactory_SetsConverter()
+        public void ForSourceAndTarget_UsingFactory_SetsConverter()
         {
             var mapInfo = new MapInfo();
             var converterBuilder = new ConverterMap<User, UserView>(mapInfo);

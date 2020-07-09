@@ -8,7 +8,7 @@ namespace HyperMap.Tests.CodeGen
     public class ReturnTargetTests
     {
         [Fact]
-        public void ReturnTarget_Target_Create_ReturnsReturnTarget()
+        public void Target_Create_ReturnsReturnTarget()
         {
             var syntax = ReturnTarget.Create();
             

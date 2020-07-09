@@ -11,7 +11,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("")]
         [InlineData(" ")]
         [InlineData("Hello")]
-        public void StringToShortTypeConverter_WithInvalidString_Convert_ReturnsZero(string source)
+        public void WithInvalidString_Convert_ReturnsZero(string source)
         {
             var converter = new StringToShortTypeConverter();
 
@@ -24,7 +24,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("0")]
         [InlineData("1")]
         [InlineData("-1")]
-        public void StringToShortTypeConverter_WithString_Convert_ReturnsShort(string source)
+        public void WithString_Convert_ReturnsShort(string source)
         {
             var converter = new StringToShortTypeConverter();
 

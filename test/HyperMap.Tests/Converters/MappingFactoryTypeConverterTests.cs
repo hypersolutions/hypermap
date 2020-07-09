@@ -18,7 +18,7 @@ namespace HyperMap.Tests.Converters
         }
         
         [Fact]
-        public void MappingFactoryTypeConverter_UnknownMapper_Convert_ReturnsNull()
+        public void UnknownMapper_Convert_ReturnsNull()
         {
             var source = new User {Id = 1, Name = "Homer"};
             _mappingFactory.Setup(f => f.Create<User, UserView>()).Returns((IMapper<User, UserView>)null);
@@ -29,7 +29,7 @@ namespace HyperMap.Tests.Converters
         }
         
         [Fact]
-        public void MappingFactoryTypeConverter_KnownMapper_Convert_ReturnsMappedTarget()
+        public void KnownMapper_Convert_ReturnsMappedTarget()
         {
             var source = new User {Id = 1, Name = "Homer"};
             var mapper = new Mock<IMapper<User, UserView>>();

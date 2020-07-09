@@ -12,7 +12,7 @@ namespace HyperMap.Tests.CodeGen
     public class MapClassTests
     {
         [Fact]
-        public void MapClass_ForMappingDetails_Create_ReturnsClassSignature()
+        public void ForMappingDetails_Create_ReturnsClassSignature()
         {
             var sourceType = typeof(User);
             var targetType = typeof(UserView);

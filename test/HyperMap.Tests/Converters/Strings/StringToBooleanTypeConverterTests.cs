@@ -11,7 +11,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("")]
         [InlineData(" ")]
         [InlineData("Hello")]
-        public void StringToBooleanTypeConverter_WithInvalidString_Convert_ReturnsFalse(string source)
+        public void WithInvalidString_Convert_ReturnsFalse(string source)
         {
             var converter = new StringToBooleanTypeConverter();
 
@@ -25,7 +25,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("False")]
         [InlineData("FALSE")]
         [InlineData("false")]
-        public void StringToBooleanTypeConverter_WithString_Convert_ReturnsFalse(string source)
+        public void WithString_Convert_ReturnsFalse(string source)
         {
             var converter = new StringToBooleanTypeConverter();
 
@@ -38,7 +38,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("True")]
         [InlineData("TRUE")]
         [InlineData("true")]
-        public void StringToBooleanTypeConverter_WithString_Convert_ReturnsTrue(string source)
+        public void WithString_Convert_ReturnsTrue(string source)
         {
             var converter = new StringToBooleanTypeConverter();
 

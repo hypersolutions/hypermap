@@ -8,7 +8,7 @@ namespace HyperMap.Tests
     public class MappingBuilderTests
     {
         [Fact]
-        public void MappingBuilder_SameAssemblyAddedTwice_AndDiscoverIn_ThrowsException()
+        public void SameAssemblyAddedTwice_AndDiscoverIn_ThrowsException()
         {
             var exception = Should.Throw<ArgumentException>(() =>
                 MappingBuilder.DiscoverIn<MappingBuilderTests>().AndDiscoverIn<MappingFactoryTests>());
@@ -17,7 +17,7 @@ namespace HyperMap.Tests
         }
         
         [Fact]
-        public void MappingBuilder_WithDefaultOptions_BuildFactory_ReturnsFactory()
+        public void WithDefaultOptions_BuildFactory_ReturnsFactory()
         {
             var factory = MappingBuilder.DiscoverIn<MappingBuilderTests>().BuildFactory();
             
@@ -25,7 +25,7 @@ namespace HyperMap.Tests
         }
         
         [Fact]
-        public void MappingBuilder_WithCustomNamespace_BuildFactory_ReturnsFactory()
+        public void WithCustomNamespace_BuildFactory_ReturnsFactory()
         {
             var options = new CompilerOptions
             {

@@ -10,7 +10,7 @@ namespace HyperMap.Tests.Exceptions
     public class MappingCompilationExceptionTests
     {
         [Fact]
-        public void MappingCompilationException_WithSingleError_Ctor_SetsMessage()
+        public void WithSingleError_Ctor_SetsMessage()
         {
             var diagnostic = CreateDiagnostic(
                 "1234", "Test Error", "Missing semicolon", "Compilation", @"c:\temp\file.cs");
@@ -24,7 +24,7 @@ namespace HyperMap.Tests.Exceptions
         }
         
         [Fact]
-        public void MappingCompilationException_WithMultipleErrors_Ctor_SetsMessage()
+        public void WithMultipleErrors_Ctor_SetsMessage()
         {
             var diagnostic1 = CreateDiagnostic(
                 "1234", "Test Error", "Missing semicolon", "Compilation", @"c:\temp\file.cs");

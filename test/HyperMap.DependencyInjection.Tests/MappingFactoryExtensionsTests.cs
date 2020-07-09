@@ -8,7 +8,7 @@ namespace HyperMap.DependencyInjection.Tests
     public class MappingFactoryExtensionsTests
     {
         [Fact]
-        public void MappingFactoryExtensions_WithMappingFactory_RegisterWith_ReturnsMappingFactory()
+        public void WithMappingFactory_RegisterWith_ReturnsMappingFactory()
         {
             var services = new ServiceCollection();
             
@@ -18,7 +18,7 @@ namespace HyperMap.DependencyInjection.Tests
         }
         
         [Fact]
-        public void MappingFactoryExtensions_WithMappingFactory_RegisterWith_AddsMappersIntoCollection()
+        public void WithMappingFactory_RegisterWith_AddsMappersIntoCollection()
         {
             var services = new ServiceCollection();
             
@@ -30,7 +30,7 @@ namespace HyperMap.DependencyInjection.Tests
         }
         
         [Fact]
-        public void MappingFactoryExtensions_WithMappingFactory_RegisterWith_CollectionInstanceMatchesFactory()
+        public void WithMappingFactory_RegisterWith_CollectionInstanceMatchesFactory()
         {
             var services = new ServiceCollection();
             

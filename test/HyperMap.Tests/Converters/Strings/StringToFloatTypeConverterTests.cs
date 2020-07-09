@@ -11,7 +11,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("")]
         [InlineData(" ")]
         [InlineData("Hello")]
-        public void StringToFloatTypeConverter_WithInvalidString_Convert_ReturnsZero(string source)
+        public void WithInvalidString_Convert_ReturnsZero(string source)
         {
             var converter = new StringToFloatTypeConverter();
 
@@ -24,7 +24,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("0.0")]
         [InlineData("1.0")]
         [InlineData("-1.0")]
-        public void StringToFloatTypeConverter_WithString_Convert_ReturnsFloat(string source)
+        public void WithString_Convert_ReturnsFloat(string source)
         {
             var converter = new StringToFloatTypeConverter();
 

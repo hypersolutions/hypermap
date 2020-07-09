@@ -13,7 +13,7 @@ namespace HyperMap.Tests.CodeGen
         [InlineData(0)]
         [InlineData(1)]
         [InlineData(2)]
-        public void TargetPropertyMapFromSource_ForPropertyMap_Create_ReturnsConvertStatement(int converterTypeIndex)
+        public void ForPropertyMap_Create_ReturnsConvertStatement(int converterTypeIndex)
         {
             var source = new MapItem {Name = "Id", Type = typeof(string)};
             var target = new MapItem {Name = "Id", Type = typeof(string)};
@@ -28,7 +28,7 @@ namespace HyperMap.Tests.CodeGen
         [InlineData(0)]
         [InlineData(1)]
         [InlineData(2)]
-        public void TargetPropertyMapFromSource_ForObjectMap_Create_ReturnsConvertStatement(int converterTypeIndex)
+        public void ForObjectMap_Create_ReturnsConvertStatement(int converterTypeIndex)
         {
             var source = new MapItem {Type = typeof(User)};
             var target = new MapItem {Name = "Id", Type = typeof(string)};

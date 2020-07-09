@@ -11,7 +11,7 @@ namespace HyperMap.Tests.Converters
         [InlineData("")]
         [InlineData(" ")]
         [InlineData("Hello")]
-        public void DefaultTypeConverter_WithString_Convert_ReturnsString(string source)
+        public void WithString_Convert_ReturnsString(string source)
         {
             var converter = new DefaultTypeConverter<string>();
 
@@ -24,7 +24,7 @@ namespace HyperMap.Tests.Converters
         [InlineData(0)]
         [InlineData(-1)]
         [InlineData(1)]
-        public void DefaultTypeConverter_WithShort_Convert_ReturnsShort(short source)
+        public void WithShort_Convert_ReturnsShort(short source)
         {
             var converter = new DefaultTypeConverter<short>();
 
@@ -37,7 +37,7 @@ namespace HyperMap.Tests.Converters
         [InlineData(0)]
         [InlineData(-1)]
         [InlineData(1)]
-        public void DefaultTypeConverter_WithInteger_Convert_ReturnsInteger(int source)
+        public void WithInteger_Convert_ReturnsInteger(int source)
         {
             var converter = new DefaultTypeConverter<int>();
 
@@ -50,7 +50,7 @@ namespace HyperMap.Tests.Converters
         [InlineData(0)]
         [InlineData(-1)]
         [InlineData(1)]
-        public void DefaultTypeConverter_WithLong_Convert_ReturnsLong(long source)
+        public void WithLong_Convert_ReturnsLong(long source)
         {
             var converter = new DefaultTypeConverter<long>();
 
@@ -63,7 +63,7 @@ namespace HyperMap.Tests.Converters
         [InlineData(0.0)]
         [InlineData(-1.0)]
         [InlineData(1.0)]
-        public void DefaultTypeConverter_WithFloat_Convert_ReturnsFloat(float source)
+        public void WithFloat_Convert_ReturnsFloat(float source)
         {
             var converter = new DefaultTypeConverter<float>();
 
@@ -76,7 +76,7 @@ namespace HyperMap.Tests.Converters
         [InlineData(0.0)]
         [InlineData(-1.0)]
         [InlineData(1.0)]
-        public void DefaultTypeConverter_WithDouble_Convert_ReturnsDouble(double source)
+        public void WithDouble_Convert_ReturnsDouble(double source)
         {
             var converter = new DefaultTypeConverter<double>();
 
@@ -89,7 +89,7 @@ namespace HyperMap.Tests.Converters
         [InlineData(0.0)]
         [InlineData(-1.0)]
         [InlineData(1.0)]
-        public void DefaultTypeConverter_WithDecimal_Convert_ReturnsDecimal(decimal source)
+        public void WithDecimal_Convert_ReturnsDecimal(decimal source)
         {
             var converter = new DefaultTypeConverter<decimal>();
 
@@ -101,7 +101,7 @@ namespace HyperMap.Tests.Converters
         [Theory]
         [InlineData(false)]
         [InlineData(true)]
-        public void DefaultTypeConverter_WithBoolean_Convert_ReturnsBoolean(bool source)
+        public void WithBoolean_Convert_ReturnsBoolean(bool source)
         {
             var converter = new DefaultTypeConverter<bool>();
 
@@ -114,7 +114,7 @@ namespace HyperMap.Tests.Converters
         [InlineData(null)]
         [InlineData(false)]
         [InlineData(true)]
-        public void DefaultTypeConverter_WithNullableBoolean_Convert_ReturnsBoolean(bool? source)
+        public void WithNullableBoolean_Convert_ReturnsBoolean(bool? source)
         {
             var converter = new DefaultTypeConverter<bool?>();
 

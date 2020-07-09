@@ -9,7 +9,7 @@ namespace HyperMap.Tests
     public class MappingFactoryTests
     {
         [Fact]
-        public void MappingFactory_UnknownSourceAndTargetType_Create_ReturnsNull()
+        public void UnknownSourceAndTargetType_Create_ReturnsNull()
         {
             var factory = new MappingFactory(typeof(MapBase).Assembly);
 
@@ -19,7 +19,7 @@ namespace HyperMap.Tests
         }
         
         [Fact]
-        public void MappingFactory_KnownSourceAndTargetType_Create_ReturnsInstance()
+        public void KnownSourceAndTargetType_Create_ReturnsInstance()
         {
             var factory = new MappingFactory(typeof(UserToUserViewMap).Assembly);
 
@@ -29,7 +29,7 @@ namespace HyperMap.Tests
         }
         
         [Fact]
-        public void MappingFactory_KnownSourceAndTargetType_Create_ReturnsSameInstance()
+        public void KnownSourceAndTargetType_Create_ReturnsSameInstance()
         {
             var factory = new MappingFactory(typeof(UserToUserViewMap).Assembly);
             var mapper1 = factory.Create<User, UserView>();
@@ -40,7 +40,7 @@ namespace HyperMap.Tests
         }
         
         [Fact]
-        public void MappingFactory_ForAllMappings_GetAll_ReturnsList()
+        public void ForAllMappings_GetAll_ReturnsList()
         {
             var factory = new MappingFactory(typeof(UserToUserViewMap).Assembly);
 
@@ -50,7 +50,7 @@ namespace HyperMap.Tests
         }
         
         [Fact]
-        public void MappingFactory_ForAllMappings_GetAll_ReturnsSameInstanceAsCreate()
+        public void ForAllMappings_GetAll_ReturnsSameInstanceAsCreate()
         {
             var factory = new MappingFactory(typeof(UserToUserViewMap).Assembly);
             var mapping1 = factory.Create<User, UserView>();

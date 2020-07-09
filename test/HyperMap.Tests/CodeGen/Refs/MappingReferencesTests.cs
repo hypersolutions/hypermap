@@ -11,7 +11,7 @@ namespace HyperMap.Tests.CodeGen.Refs
     public class MappingReferencesTests
     {
         [Fact]
-        public void MappingReferences_SingleMapping_Get_ReturnsDistinctReferences()
+        public void SingleMapping_Get_ReturnsDistinctReferences()
         {
             var mappingReferences = new MappingReferences();
             var mappings = new List<MapBase>(new[] {new UserToUserViewMap()});

@@ -9,7 +9,7 @@ namespace HyperMap.Tests.CodeGen
     public class LocalTargetVariableTests
     {
         [Fact]
-        public void LocalTargetVariable_ForTargetType_Create_ReturnsLocalVariable()
+        public void ForTargetType_Create_ReturnsLocalVariable()
         {
             var targetType = typeof(UserView);
             

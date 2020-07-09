@@ -7,7 +7,7 @@ namespace HyperMap.Tests.Converters.Strings
     public class AnyToStringTypeConverterTests
     {
         [Fact]
-        public void AnyToStringTypeConverter_WithNull_Convert_ReturnsNullString()
+        public void WithNull_Convert_ReturnsNullString()
         {
             var converter = new AnyToStringTypeConverter<ObjectClass>();
 
@@ -21,7 +21,7 @@ namespace HyperMap.Tests.Converters.Strings
         [InlineData("")]
         [InlineData(" ")]
         [InlineData("Hello")]
-        public void AnyToStringTypeConverter_WithString_Convert_ReturnsNullString(string source)
+        public void WithString_Convert_ReturnsNullString(string source)
         {
             var converter = new AnyToStringTypeConverter<string>();
 
@@ -31,7 +31,7 @@ namespace HyperMap.Tests.Converters.Strings
         }
         
         [Fact]
-        public void AnyToStringTypeConverter_WithObject_Convert_ReturnsStringOfObject()
+        public void WithObject_Convert_ReturnsStringOfObject()
         {
             var converter = new AnyToStringTypeConverter<ObjectClass>();
 

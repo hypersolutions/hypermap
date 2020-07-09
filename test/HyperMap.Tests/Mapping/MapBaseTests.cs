@@ -8,7 +8,7 @@ namespace HyperMap.Tests.Mapping
     public class MapBaseTests
     {
         [Fact]
-        public void MapBase_ForMapping_SourceType_IsUser()
+        public void ForMapping_SourceType_IsUser()
         {
             var mapping = new UserToUserViewMap();
             
@@ -16,7 +16,7 @@ namespace HyperMap.Tests.Mapping
         }
         
         [Fact]
-        public void MapBase_ForMapping_TargetType_IsUserView()
+        public void ForMapping_TargetType_IsUserView()
         {
             var mapping = new UserToUserViewMap();
             
@@ -24,7 +24,7 @@ namespace HyperMap.Tests.Mapping
         }
         
         [Fact]
-        public void MapBase_ForMapping_Mappings_ContainsId()
+        public void ForMapping_Mappings_ContainsId()
         {
             var mapping = new UserToUserViewMap();
             
@@ -32,7 +32,7 @@ namespace HyperMap.Tests.Mapping
         }
         
         [Fact]
-        public void MapBase_ForMapping_Mappings_ContainsName()
+        public void ForMapping_Mappings_ContainsName()
         {
             var mapping = new UserToUserViewMap();
             

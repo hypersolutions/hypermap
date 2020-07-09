@@ -9,7 +9,7 @@ namespace HyperMap.Tests.Mapping
     public class TargetMapTests
     {
         [Fact]
-        public void TargetMap_ForSource_MapTo_SetsTarget()
+        public void ForSource_MapTo_SetsTarget()
         {
             var sourceProperty = typeof(User).GetProperty("Id");
             var mapInfo = new MapInfo
@@ -24,7 +24,7 @@ namespace HyperMap.Tests.Mapping
         }
         
         [Fact]
-        public void TargetMap_ForReadOnlyTarget_MapTo_ThrowsException()
+        public void ForReadOnlyTarget_MapTo_ThrowsException()
         {
             var sourceProperty = typeof(User).GetProperty("Id");
             var mapInfo = new MapInfo

@@ -9,7 +9,7 @@ namespace HyperMap.Tests.CodeGen
     public class MapCodeGenTests
     {
         [Fact]
-        public void MapCodeGen_ForMappingDetails_Create_ReturnsClassSignature()
+        public void ForMappingDetails_Create_ReturnsClassSignature()
         {
             var mapping = new UserToUserViewMap();
 
