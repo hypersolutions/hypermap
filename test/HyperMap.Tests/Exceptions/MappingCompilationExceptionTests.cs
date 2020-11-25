@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using HyperMap.Exceptions;
 using Microsoft.CodeAnalysis;
@@ -20,7 +21,8 @@ namespace HyperMap.Tests.Exceptions
             var message = exception.Message;
             
             message.ShouldBe(
-                "ID: 1234, Message: Missing semicolon, Location: c:\\temp\\file.cs: (0,0)-(5,3), Severity: Error\r\n");
+                "ID: 1234, Message: Missing semicolon, Location: c:\\temp\\file.cs: (0,0)-(5,3), " +
+                $"Severity: Error{Environment.NewLine}");
         }
         
         [Fact]
@@ -36,8 +38,10 @@ namespace HyperMap.Tests.Exceptions
             var message = exception.Message;
             
             message.ShouldBe(
-                "ID: 1234, Message: Missing semicolon, Location: c:\\temp\\file.cs: (0,0)-(5,3), Severity: Error\r\n" +
-                "ID: 5678, Message: Missing dot, Location: c:\\temp\\file.cs: (0,0)-(5,3), Severity: Error\r\n");
+                "ID: 1234, Message: Missing semicolon, Location: c:\\temp\\file.cs: (0,0)-(5,3), " +
+                $"Severity: Error{Environment.NewLine}" +
+                "ID: 5678, Message: Missing dot, Location: c:\\temp\\file.cs: (0,0)-(5,3), " +
+                $"Severity: Error{Environment.NewLine}");
         }
 
         private static Diagnostic CreateDiagnostic(
