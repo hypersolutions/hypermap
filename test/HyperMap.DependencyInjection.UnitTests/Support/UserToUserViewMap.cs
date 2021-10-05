@@ -1,6 +1,6 @@
 using HyperMap.Mapping;
 
-namespace HyperMap.DependencyInjection.Tests.Support
+namespace HyperMap.DependencyInjection.UnitTests.Support
 {
     public class UserToUserViewMap : MapBase<User, UserView>
     {

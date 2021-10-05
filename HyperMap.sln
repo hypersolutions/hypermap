@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperMap.IntTests", "test\H
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperMap.DependencyInjection", "src\HyperMap.DependencyInjection\HyperMap.DependencyInjection.csproj", "{81705725-C12E-4D3D-8B51-B48A168C1233}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperMap.DependencyInjection.Tests", "test\HyperMap.DependencyInjection.Tests\HyperMap.DependencyInjection.Tests.csproj", "{C91909A6-8A77-4922-8D2C-204EBFFAA52A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperMap.DependencyInjection.UnitTests", "test\HyperMap.DependencyInjection.UnitTests\HyperMap.DependencyInjection.UnitTests.csproj", "{C91909A6-8A77-4922-8D2C-204EBFFAA52A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

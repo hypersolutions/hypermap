@@ -1,9 +1,9 @@
-using HyperMap.DependencyInjection.Tests.Support;
+using HyperMap.DependencyInjection.UnitTests.Support;
 using Microsoft.Extensions.DependencyInjection;
 using Shouldly;
 using Xunit;
 
-namespace HyperMap.DependencyInjection.Tests
+namespace HyperMap.DependencyInjection.UnitTests
 {
     public class MappingFactoryExtensionsTests
     {
