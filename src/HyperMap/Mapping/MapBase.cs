@@ -9,7 +9,7 @@ namespace HyperMap.Mapping
 {
     public abstract class MapBase
     {
-        private readonly List<MapInfo> _mappings = new List<MapInfo>();
+        private readonly List<MapInfo> _mappings = new();
         
         protected MapBase(bool runAutoMappings)
         {

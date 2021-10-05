@@ -1,4 +1,5 @@
 using HyperMap.Mapping;
+// ReSharper disable UnusedType.Global
 
 namespace HyperMap.DependencyInjection.UnitTests.Support
 {

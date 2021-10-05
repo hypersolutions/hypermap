@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using HyperMap.Converters.Collections;
 using HyperMap.UnitTests.Support;
@@ -24,7 +25,7 @@ namespace HyperMap.UnitTests.Converters.Collections
         {
             var converter = new EnumerableToListTypeConverter<User, UserView>();
 
-            var target = converter.Convert(new User[0]);
+            var target = converter.Convert(Array.Empty<User>());
             
             target.ShouldBeNull();
         }

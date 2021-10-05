@@ -21,7 +21,7 @@ namespace HyperMap
         {
             var key = CreateKey<TSource, TTarget>();
 
-            var instance = _instances.GetOrAdd(key, k =>
+            var instance = _instances.GetOrAdd(key, _ =>
             {
                 var type = _mappingAssembly
                     .GetTypes()
@@ -44,7 +44,7 @@ namespace HyperMap
                 var sourceType = interfaceType.GenericTypeArguments[0];
                 var targetType = interfaceType.GenericTypeArguments[1];
                 var key = CreateKey(sourceType, targetType);
-                var instance = _instances.GetOrAdd(key, k =>
+                var instance = _instances.GetOrAdd(key, _ =>
                 {
                     return new Lazy<object>(() => Activator.CreateInstance(type, this));
                 });

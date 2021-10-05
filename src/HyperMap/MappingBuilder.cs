@@ -13,8 +13,8 @@ namespace HyperMap
 {
     public sealed class MappingBuilder
     {
-        private readonly List<MapBase> _mappings = new List<MapBase>();
-        private readonly List<string> _visitedAssemblyLocations = new List<string>();
+        private readonly List<MapBase> _mappings = new();
+        private readonly List<string> _visitedAssemblyLocations = new();
 
         private MappingBuilder(IEnumerable<MapBase> mappings, Type assemblyType)
         {
@@ -44,7 +44,7 @@ namespace HyperMap
 
         public IMappingFactory BuildFactory(CompilerOptions options = null)
         {
-            options = options ?? new CompilerOptions();
+            options ??= new CompilerOptions();
             var compiler = new MappingCompiler(options);
             var trees = new List<SyntaxTree>();
             
@@ -67,17 +67,15 @@ namespace HyperMap
         
         private static IMappingFactory HandleCompilationResult(Compilation compilation)
         {
-            using (var stream = new MemoryStream())
-            {
-                var emitResult = compilation.Emit(stream);
+            using var stream = new MemoryStream();
+            var emitResult = compilation.Emit(stream);
 
-                if (!emitResult.Success) throw new MappingCompilationException(emitResult.Diagnostics);
+            if (!emitResult.Success) throw new MappingCompilationException(emitResult.Diagnostics);
                 
-                stream.Seek(0, SeekOrigin.Begin);
-                var data = new byte[stream.Length];
-                stream.Read(data, 0, data.Length);
-                return new MappingFactory(Assembly.Load(data));
-            }
+            stream.Seek(0, SeekOrigin.Begin);
+            var data = new byte[stream.Length];
+            stream.Read(data, 0, data.Length);
+            return new MappingFactory(Assembly.Load(data));
         }
     }
 }

@@ -1,3 +1,4 @@
+// ReSharper disable PropertyCanBeMadeInitOnly.Global
 namespace HyperMap.IntTests.Sources
 {
     public class Order

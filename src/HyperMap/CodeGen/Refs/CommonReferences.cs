@@ -20,12 +20,14 @@ namespace HyperMap.CodeGen.Refs
             var baseLocation = typeof(Enumerable).GetTypeInfo().Assembly.Location;
             var baseLocationPath = Directory.GetParent(baseLocation);
             
-            var locations = new List<string>();
-            locations.Add(Path.Combine(baseLocationPath.FullName, "mscorlib.dll"));
-            locations.Add(Path.Combine(baseLocationPath.FullName, "System.Runtime.dll"));
-            locations.Add(typeof(object).GetTypeInfo().Assembly.Location);
-            locations.Add(Assembly.Load("System.Collections").Location);
-            locations.Add(Assembly.Load("netstandard").Location);
+            var locations = new List<string>
+            {
+                Path.Combine(baseLocationPath!.FullName, "mscorlib.dll"),
+                Path.Combine(baseLocationPath.FullName, "System.Runtime.dll"),
+                typeof(object).GetTypeInfo().Assembly.Location,
+                Assembly.Load("System.Collections").Location,
+                Assembly.Load("netstandard").Location
+            };
 
             return locations.Distinct();
         }

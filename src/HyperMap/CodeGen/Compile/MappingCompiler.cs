@@ -10,8 +10,8 @@ namespace HyperMap.CodeGen.Compile
     internal sealed class MappingCompiler
     {
         private readonly CompilerOptions _options;
-        private readonly CommonReferences _commonReferences = new CommonReferences();
-        private readonly MappingReferences _mappingReferences = new MappingReferences();
+        private readonly CommonReferences _commonReferences = new();
+        private readonly MappingReferences _mappingReferences = new();
         
         internal MappingCompiler(CompilerOptions options)
         {

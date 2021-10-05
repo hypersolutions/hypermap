@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-
+// ReSharper disable ClassNeverInstantiated.Global
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 
 namespace HyperMap.IntTests.Targets
