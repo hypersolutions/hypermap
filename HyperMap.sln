@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E03493EE-1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperMap.UnitTests", "test\HyperMap.UnitTests\HyperMap.UnitTests.csproj", "{83AC9556-DED6-4027-9536-5185827D7AB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperMap.Integration.Tests", "test\HyperMap.Integration.Tests\HyperMap.Integration.Tests.csproj", "{438511E9-9C9E-4412-9617-B553E212B78B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperMap.IntTests", "test\HyperMap.IntTests\HyperMap.IntTests.csproj", "{438511E9-9C9E-4412-9617-B553E212B78B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperMap.DependencyInjection", "src\HyperMap.DependencyInjection\HyperMap.DependencyInjection.csproj", "{81705725-C12E-4D3D-8B51-B48A168C1233}"
 EndProject

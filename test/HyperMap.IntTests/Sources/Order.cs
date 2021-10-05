@@ -1,7 +1,6 @@
-// ReSharper disable UnusedAutoPropertyAccessor.Global
-namespace HyperMap.Integration.Tests.Targets
+namespace HyperMap.IntTests.Sources
 {
-    public class OrderView
+    public class Order
     {
         public int Id { get; set; }
         public string Description { get; set; }

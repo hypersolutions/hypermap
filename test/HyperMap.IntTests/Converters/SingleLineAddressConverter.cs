@@ -1,7 +1,7 @@
 using HyperMap.Converters;
-using HyperMap.Integration.Tests.Sources;
+using HyperMap.IntTests.Sources;
 
-namespace HyperMap.Integration.Tests.Converters
+namespace HyperMap.IntTests.Converters
 {
     public class SingleLineAddressConverter : ITypeConverter<Address, string>
     {

@@ -1,4 +1,4 @@
-namespace HyperMap.Integration.Tests.Sources
+namespace HyperMap.IntTests.Sources
 {
     public class Login
     {

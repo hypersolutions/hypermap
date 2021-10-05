@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace HyperMap.Integration.Tests.Sources
+namespace HyperMap.IntTests.Sources
 {
     public class Customer
     {

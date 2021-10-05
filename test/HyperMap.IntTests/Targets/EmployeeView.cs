@@ -1,5 +1,5 @@
 // ReSharper disable UnusedAutoPropertyAccessor.Global
-namespace HyperMap.Integration.Tests.Targets
+namespace HyperMap.IntTests.Targets
 {
     public class EmployeeView
     {

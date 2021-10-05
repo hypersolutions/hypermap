@@ -1,9 +1,9 @@
-using HyperMap.Integration.Tests.Sources;
-using HyperMap.Integration.Tests.Targets;
+using HyperMap.IntTests.Sources;
+using HyperMap.IntTests.Targets;
 using Shouldly;
 using Xunit;
 
-namespace HyperMap.Integration.Tests
+namespace HyperMap.IntTests
 {
     public class NestedSourceToFlatTargetTests
     {

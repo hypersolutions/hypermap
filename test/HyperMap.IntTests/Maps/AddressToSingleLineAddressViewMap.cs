@@ -1,9 +1,9 @@
-using HyperMap.Integration.Tests.Converters;
-using HyperMap.Integration.Tests.Sources;
-using HyperMap.Integration.Tests.Targets;
+using HyperMap.IntTests.Converters;
+using HyperMap.IntTests.Sources;
+using HyperMap.IntTests.Targets;
 using HyperMap.Mapping;
 
-namespace HyperMap.Integration.Tests.Maps
+namespace HyperMap.IntTests.Maps
 {
     public sealed class AddressToSingleLineAddressViewMap : MapBase<Address, SingleLineAddressView>
     {
