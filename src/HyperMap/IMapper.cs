@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("HyperMap.Tests")]
+[assembly: InternalsVisibleTo("HyperMap.UnitTests")]
 
 namespace HyperMap
 {
